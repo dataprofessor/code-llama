@@ -1,4 +1,4 @@
-# 🦙💬 Code Llama Chat
+# 🦙💬 Code Llama Chatbot
 
 This chatbot is created using the open-source Code Llama model that has been tuned for code completion from Meta.
 
