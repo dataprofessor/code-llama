@@ -70,7 +70,7 @@ if st.session_state.messages[-1]["role"] != "assistant":
             full_response = ''
             for item in response:
                 full_response += item
-                placeholder.markdown(full_response)
-            placeholder.markdown(full_response)
+                placeholder.markdown(full_response, unsafe_allow_html=True)
+            placeholder.markdown(full_response, unsafe_allow_html=True)
     message = {"role": "assistant", "content": full_response}
     st.session_state.messages.append(message)
