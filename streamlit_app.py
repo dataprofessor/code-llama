@@ -59,13 +59,10 @@ def generate_llama2_response(prompt_input):
             string_dialogue += "Assistant: " + dict_message["content"] + "\n\n"
     #output = replicate.run('a16z-infra/llama13b-v2-chat:df7690f1994d94e96ad9d568eac121aecf50684a0b0963b25a41cc40061269e5', 
     prompt = """
-    <s>[INST]<<SYS>>
     Write code to solve the following coding problem and wrap your code answer, particularly using ``` and ``` before and after the code answer, respectively:
-    <</SYS>>[/INST]</s>
 
-    <s>[INST]
     {prompt_input}
-    [/INST]</s>
+
     Assistant:
     """
     output = replicate.run('replicate/codellama-7b-python:0135c7cd0ffb4917e53580562c8d528a46b64102546c27333e8ff8298a85798f',
