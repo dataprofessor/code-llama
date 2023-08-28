@@ -52,7 +52,7 @@ def generate_llama2_response(prompt_input):
     #output = replicate.run('a16z-infra/llama13b-v2-chat:df7690f1994d94e96ad9d568eac121aecf50684a0b0963b25a41cc40061269e5', 
     output = replicate.run('replicate/codellama-13b:1c914d844307b0588599b8393480a3ba917b660c7e9dfae681542b5325f228db',
                            input={"prompt": f"{string_dialogue} {prompt_input} Assistant: ",
-                                  "temperature":temperature, "top_p":top_p, "top_k":top_k, "max_length":max_length, "repetition_penalty":1})
+                                  "temperature":temperature, "top_p":top_p, "top_k":top_k, "max_length":max_length, "repetition_penalty":1.15})
     return output
 
 # User-provided prompt
