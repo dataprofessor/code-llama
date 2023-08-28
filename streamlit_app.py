@@ -68,7 +68,7 @@ def generate_llama2_response(prompt_input):
     [/INST]</s>
     Assistant:
     """
-    output = replicate.run('replicate/codellama-13b:1c914d844307b0588599b8393480a3ba917b660c7e9dfae681542b5325f228db',
+    output = replicate.run('replicate/codellama-7b-python:0135c7cd0ffb4917e53580562c8d528a46b64102546c27333e8ff8298a85798f',
                            #input={"prompt": f"{string_dialogue} {prompt_input} Assistant: ",
                            input={"prompt": prompt,
                                   "temperature":temperature, "top_p":top_p, "top_k":top_k, "max_length":max_length, "repetition_penalty":1.15})
