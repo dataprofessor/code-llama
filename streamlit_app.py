@@ -59,7 +59,7 @@ def generate_llama2_response(prompt_input):
             string_dialogue += "Assistant: " + dict_message["content"] + "\n\n"
     #output = replicate.run('a16z-infra/llama13b-v2-chat:df7690f1994d94e96ad9d568eac121aecf50684a0b0963b25a41cc40061269e5', 
     prompt = """
-    [INST] Write code to solve the following coding problem that obeys the constraints and passes the example test cases. Please wrap your code answer using ```:
+    [INST] Write code to solve the following coding problem that obeys the constraints of wrapping your code answer using ```:
     {prompt_input}
     [/INST]
     """
