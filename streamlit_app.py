@@ -3,7 +3,7 @@ import replicate
 import os
 
 # App title
-st.set_page_config(page_title="🦙💬 Llama 2 Chatbot")
+st.set_page_config(page_title="🦙💬 Code Llama Chatbot")
 
 # Replicate Credentials
 with st.sidebar:
