@@ -29,7 +29,7 @@ os.environ['REPLICATE_API_TOKEN'] = replicate_api
 
 # Store LLM generated responses
 if "messages" not in st.session_state.keys():
-    st.session_state.messages = [{"role": "assistant", "content": "How may I assist you in coding?"}]
+    st.session_state.messages = [{"role": "assistant", "content": "How may I assist you today?"}]
 
 # Display or clear chat messages
 for message in st.session_state.messages:
@@ -37,7 +37,7 @@ for message in st.session_state.messages:
         st.write(message["content"])
 
 def clear_chat_history():
-    st.session_state.messages = [{"role": "assistant", "content": "How may I assist you in coding?"}]
+    st.session_state.messages = [{"role": "assistant", "content": "How may I assist you today?"}]
 st.sidebar.button('Clear Chat History', on_click=clear_chat_history)
 
 # Function for generating LLaMA2 response
@@ -58,7 +58,8 @@ def generate_llama2_response(prompt_input):
             string_dialogue += "Assistant: " + dict_message["content"] + "\n\n"
     #output = replicate.run('a16z-infra/llama13b-v2-chat:df7690f1994d94e96ad9d568eac121aecf50684a0b0963b25a41cc40061269e5', 
     output = replicate.run('replicate/codellama-13b:1c914d844307b0588599b8393480a3ba917b660c7e9dfae681542b5325f228db',
-                           input={"prompt": f"{string_dialogue} {prompt_input} Assistant: ",
+                           #input={"prompt": f"{string_dialogue} {prompt_input} Assistant: ",
+                           input={"prompt": string_dialogue + "Assistant: ",
                                   "temperature":temperature, "top_p":top_p, "top_k":top_k, "max_length":max_length, "repetition_penalty":1.15})
     return output
 
