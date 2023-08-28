@@ -60,7 +60,7 @@ def generate_llama2_response(prompt_input):
     #output = replicate.run('a16z-infra/llama13b-v2-chat:df7690f1994d94e96ad9d568eac121aecf50684a0b0963b25a41cc40061269e5', 
     prompt = """
     User:
-    Write code to solve the following coding problem that obeys the constraints of wrapping your code answer using ```:
+    Write code to solve the following coding problem and wrap your code answer using ```:
     {prompt_input}
     
     Assistant:
