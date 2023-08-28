@@ -44,8 +44,14 @@ st.sidebar.button('Clear Chat History', on_click=clear_chat_history)
 # Refactored from https://github.com/a16z-infra/llama2-chatbot
 def generate_llama2_response(prompt_input):
     string_dialogue = """
-    You are a helpful assistant. You do not respond as 'User' or pretend to be 'User'. You only respond once as 'Assistant' and don't repeat yourself.
+    You are a helpful assistant. You do not respond as 'User' or pretend to be 'User'. You only respond once as 'Assistant'. 
+    
+    Most importantly don't repeat yourself excessively.
+    
     If you don't know, say you don't know and don't make up stuff.
+
+    Make your response concise, to the point and relevant to the question being asked.
+    
     Whenever you need to generate code please encapsulate the code using the following format:
     ```code goes here```.
     """
