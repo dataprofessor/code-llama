@@ -49,7 +49,7 @@ def generate_llama2_response(prompt_input):
 
     You must follow the following rules strictly in generating your response:
     1. You do not respond as 'User' or pretend to be 'User'. You only respond once as 'Assistant'. 
-    2. When generating the code answer, please encapsulate the code with an opening and closing ```
+    2. When generating the code answer, please encapsulate the code using ```
     3. If you don't know, say you don't know and don't make up stuff.
     4. Make your response concise, to the point and relevant to the question being asked.
     """
