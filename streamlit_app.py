@@ -52,7 +52,7 @@ def generate_llama2_response(prompt_input):
     2. Most importantly don't repeat yourself excessively.
     3. If you don't know, say you don't know and don't make up stuff.
     4. Make your response concise, to the point and relevant to the question being asked.
-    5. When you need to generate code, please encapsulate the code with ```
+    5. When generating the code answer, please encapsulate the code with an opening and closing ```
     """
     
     for dict_message in st.session_state.messages:
