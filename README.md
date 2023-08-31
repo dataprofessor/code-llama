@@ -2,7 +2,7 @@
 
 This chatbot is created using the open-source Code Llama model that has been tuned for code completion from Meta.
 
-Particularly, we're using the [**codellama-13b**](https://replicate.com/replicate/codellama-13b) model hosted on the [Replicate](https://replicate.com/) platform.
+Particularly, we're using the [**codellama-7b-instruct**](https://replicate.com/replicate/codellama-7b-instruct) model hosted on the [Replicate](https://replicate.com/) platform.
 
 ## Demo App
 
